@@ -1,0 +1,185 @@
+/* Elegant Light Theme */
+.light {
+  --primary: #0f172a;
+  --primary-light: #334155;
+  --secondary: #3b82f6;
+  --secondary-light: #60a5fa;
+  --accent: #f59e0b;
+  --accent-light: #fbbf24;
+  --text: #0f172a;
+  --text-light: #64748b;
+  --text-muted: #94a3b8;
+  --background: #ffffff;
+  --background-alt: #f8fafc;
+  --background-section: #f1f5f9;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow: rgba(15, 23, 42, 0.08);
+  --shadow-hover: rgba(15, 23, 42, 0.15);
+  --gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  --gradient-light: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Light Theme Button Styles */
+.light .btn {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.light .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.light .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow-hover);
+}
+
+.light .btn:hover::before {
+  opacity: 1;
+}
+
+.light .btn > * {
+  position: relative;
+  z-index: 1;
+}
+
+.light .btn-outline {
+  background: transparent;
+  color: var(--secondary);
+  border: 2px solid var(--secondary);
+  box-shadow: none;
+}
+
+.light .btn-outline::before {
+  background: var(--gradient);
+}
+
+.light .btn-outline:hover {
+  color: white;
+  border-color: var(--secondary);
+}
+
+/* Section styling for blue-rose theme */
+.light section {
+  background: var(--background);
+  position: relative;
+}
+
+.light section:nth-child(even) {
+  background: var(--background-section);
+}
+
+.light .section-title {
+  color: var(--primary);
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.light .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+.light .section-title::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 1px;
+}
+
+/* Card styling */
+.light .card {
+  background: var(--background);
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 24px var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.light .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient);
+}
+
+.light .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px var(--shadow-hover);
+  border-color: var(--secondary-light);
+}
+
+/* Navbar styling */
+.light .navbar {
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.light .navbar.scrolled {
+  background: rgba(248, 250, 252, 0.95);
+}
+
+/* Text styles */
+.light h1, .light h2, .light h3 {
+  color: var(--primary);
+}
+
+.light p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Links */
+.light a:not(.btn):not(.nav-link) {
+  color: var(--secondary);
+  transition: color 0.3s ease;
+}
+
+.light a:not(.btn):not(.nav-link):hover {
+  color: var(--secondary-light);
+}

@@ -1,0 +1,245 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(circle at 25% 25%, currentColor 2px, transparent 2px),
+                    radial-gradient(circle at 75% 75%, currentColor 2px, transparent 2px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+
+.hero-content {
+  max-width: 900px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-intro {
+  margin-bottom: 1rem;
+}
+
+.hero-greeting-small {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-name {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  margin: 1rem 0;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, currentColor 0%, currentColor 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero-roles {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hero-role-prefix {
+  opacity: 0.8;
+}
+
+.hero-typewriter {
+  position: relative;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn-primary,
+.hero-btn-secondary {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  min-width: 200px;
+}
+
+.hero-social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.5rem;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: bounce 3s infinite;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.hero-scroll span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Theme specific styles */
+.light .hero-greeting-small {
+  color: var(--text-light);
+}
+
+.light .hero-name {
+  color: var(--primary);
+}
+
+.light .hero-roles {
+  color: var(--primary-light);
+}
+
+.light .hero-description {
+  color: var(--text-light);
+}
+
+.light .social-link {
+  background: var(--background-alt);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+
+.light .social-link:hover {
+  background: var(--secondary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+.light .hero-scroll {
+  color: var(--text-muted);
+}
+
+.dark .hero-greeting-small {
+  color: var(--text-light);
+}
+
+.dark .hero-name {
+  color: var(--text);
+}
+
+.dark .hero-roles {
+  color: var(--secondary);
+}
+
+.dark .hero-description {
+  color: var(--text-light);
+}
+
+.dark .social-link {
+  background: var(--background-alt);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+}
+
+.dark .social-link:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow-hover);
+}
+
+.dark .hero-scroll {
+  color: var(--text-muted);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-20px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}

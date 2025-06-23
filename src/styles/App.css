@@ -1,0 +1,98 @@
+.app {
+  min-height: 100vh;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.main-content {
+  padding-top: 70px; /* Height of navbar */
+  position: relative;
+  z-index: 1;
+}
+
+/* Global theme application */
+.app.light {
+  background: var(--background);
+  color: var(--text);
+}
+
+.app.dark {
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Smooth transitions for page changes */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: var(--background-alt);
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-light);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--background-alt);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+/* Selection styling */
+.light ::selection {
+  background: var(--secondary-light);
+  color: white;
+}
+
+.dark ::selection {
+  background: var(--secondary);
+  color: white;
+}
+
+/* Focus states */
+.light *:focus {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
+.dark *:focus {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}

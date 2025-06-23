@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Loïc PHILIPPE",
+    "rolePrefix": "I'm a ",
+    "roles": ["Student", "Developer", "Tech Enthusiast", "Video Game Fan"],
+    "description": "Student at Epitech Mulhouse, I'm developing my programming skills and exploring the fascinating world of software development, DevOps, and video games.",
+    "ctaPrimary": "Discover my journey",
+    "ctaSecondary": "View my projects",
+    "scrollText": "Discover"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I'm a student at Epitech Mulhouse, passionate about programming and game development. I'm currently learning new programming languages and exploring DevOps.",
+    "details": {
+      "education": "Epitech Mulhouse Student - 2nd year",
+      "development": "Software Development",
+      "passion": "???",
+      "gaming": "Video game and music enthusiast"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies and tools I use in my projects",
+    "categories": {
+      "programming": "Programming Languages",
+      "tools": "Tools & Platforms"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Discover some of my recent projects, ranging from web and game development to shell development.",
+    "viewCode": "Source Code",
+    "liveDemo": "View Project",
+    "releases": "Download Game",
+    "categories": {
+      "gamedev": "Game Development",
+      "web": "Web Development",
+      "ai": "AI & Automation",
+      "upcoming": "Game Development"
+    },
+    "projectData": {
+      "gamedev": {
+        "title": "Illusion - Horror Game",
+        "description": "This project is our entry for the 2025 Epitech game jam. The theme for this year's jam is 'Illusion'. We have created a horror game that plays with the concept of illusion to deliver a unique and thrilling experience."
+      },
+      "secureshot": {
+        "title": "SecureShot - Photo Selling Platform",
+        "description": "Secure platform for photo sales with PayPal payments. Developed with React, TailwindCSS, Node.js, Express, and Supabase. Features session management, role-based access (photographer/buyer), and secure payment processing. I mainly handled frontend development."
+      },
+      "ai": {
+        "title": "AI Assistant Tool",
+        "description": "An app using AI to automate certain development tasks and boost productivity."
+      },
+      "comingSoon": {
+        "title": "New Project Coming Soon",
+        "description": "The repository is not public yet, so I can't share much for now. Stay tuned!"
+      },
+      "pokoban": {
+        "title": "Pokoban",
+        "description": "Pokoban is a themed version of the classic puzzle game Sokoban, where the player pushes Pokémon-themed boxes around a warehouse, trying to get them to storage locations. This implementation of Sokoban is written in C using SFML."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's talk about your next project",
+    "contactInfo": "Contact Information",
+    "location": "Location",
+    "locationValue": "Mulhouse, France",
+    "social": {
+      "title": "Social Media"
+    },
+    "email": "Email",
+    "emailValue": "loic.philippe@epitech.eu",
+    "linkedin": "LinkedIn",
+    "linkedinValue": "Loïc PHILIPPE",
+    "github": "GitHub",
+    "githubValue": "Loic-ally",
+    "contactCta": "Contact"
+  }
+}

@@ -1,0 +1,304 @@
+/* Beautiful Dark Theme with Blue and Rose Nuances */
+.dark {
+  --primary: #0f0b1a;
+  --primary-light: #1a1228;
+  --secondary: #4f46e5;
+  --secondary-light: #6366f1;
+  --secondary-dark: #3730a3;
+  --accent: #ec4899;
+  --accent-light: #f472b6;
+  --accent-dark: #be185d;
+  --text: #f8fafc;
+  --text-light: #cbd5e1;
+  --text-muted: #94a3b8;
+  --background: #0a0612;
+  --background-alt: #1e1b2e;
+  --background-section: #2a1f3a;
+  --background-card: #251b35;
+  --border: #374151;
+  --border-light: #4b5563;
+  --shadow: rgba(79, 70, 229, 0.15);
+  --shadow-hover: rgba(79, 70, 229, 0.25);
+  --shadow-rose: rgba(236, 72, 153, 0.15);
+  --gradient: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
+  --gradient-blue: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  --gradient-rose: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+  --gradient-bg: linear-gradient(135deg, #0a0612 0%, #1e1b2e 100%);
+  
+  /* Add a subtle animated background gradient */
+  background: linear-gradient(-45deg, #0a0612, #1e1b2e, #2a1f3a, #1a1228);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  
+  color: var(--text);
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Dark Theme Button Styles */
+.dark .btn {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px var(--shadow), 0 0 20px rgba(79, 70, 229, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.dark .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-rose);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dark .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow-hover), 0 0 30px rgba(236, 72, 153, 0.2);
+}
+
+.dark .btn:hover::before {
+  opacity: 1;
+}
+
+.dark .btn > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dark .btn-outline {
+  background: transparent;
+  color: var(--secondary-light);
+  border: 2px solid var(--secondary-light);
+  box-shadow: none;
+}
+
+.dark .btn-outline::before {
+  background: var(--gradient);
+}
+
+.dark .btn-outline:hover {
+  color: white;
+  border-color: var(--secondary-light);
+}
+
+/* Section styling for dark theme */
+.dark section {
+  background: var(--background);
+  position: relative;
+}
+
+.dark section:nth-child(even) {
+  background: var(--background-section);
+}
+
+.dark .section-title {
+  color: var(--text);
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: var(--gradient);
+  border-radius: 2px;
+}
+
+.dark .section-title::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent-light);
+  border-radius: 1px;
+}
+
+/* Card styling */
+.dark .card {
+  background: var(--background-card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.dark .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient);
+}
+
+.dark .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.dark .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px var(--shadow-hover), 0 0 20px var(--shadow-rose);
+  border-color: var(--secondary-light);
+  background: linear-gradient(135deg, var(--background-card) 0%, rgba(79, 70, 229, 0.05) 100%);
+}
+
+.dark .card:hover::after {
+  opacity: 0.05;
+}
+
+/* Navbar styling */
+.dark .navbar {
+  background: rgba(26, 18, 40, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark .navbar.scrolled {
+  background: rgba(26, 18, 40, 0.95);
+}
+
+/* Text styles */
+.dark h1, .dark h2, .dark h3 {
+  color: var(--text);
+}
+
+.dark h1 {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.dark p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Links */
+.dark a:not(.btn):not(.nav-link) {
+  color: var(--secondary-light);
+  transition: color 0.3s ease;
+}
+
+.dark a:not(.btn):not(.nav-link):hover {
+  color: var(--accent-light);
+}
+
+/* Special effects for dark theme */
+.dark .glow-effect {
+  box-shadow: 0 0 20px var(--shadow), 0 0 40px var(--shadow-rose);
+}
+
+.dark .text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(var(--background-card), var(--background-card)) padding-box,
+              var(--gradient) border-box;
+}
+
+/* Scrollbar styling for dark theme */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--background-alt);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--gradient);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-rose);
+}
+
+/* Additional visual enhancements */
+.dark .highlight {
+  color: var(--accent-light);
+}
+
+.dark .secondary-text {
+  color: var(--secondary-light);
+}
+
+.dark .muted-text {
+  color: var(--text-muted);
+}
+
+.dark .bg-gradient {
+  background: var(--gradient-bg);
+}
+
+.dark .skill-tag {
+  background: rgba(79, 70, 229, 0.1);
+  border: 1px solid rgba(79, 70, 229, 0.3);
+  color: var(--secondary-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.dark .skill-tag:hover {
+  background: rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.3);
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}
