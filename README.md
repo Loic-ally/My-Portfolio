@@ -1,4 +1,4 @@
-# Enzo's Portfolio Website
+# Loïc's Portfolio Website
 
 A modern, responsive portfolio website built with React, featuring smooth animations, theme switching, and multilingual support.
 
